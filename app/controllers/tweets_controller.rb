@@ -27,7 +27,7 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tweets }
+      format.json { render json: @tweets.to_json, callback: params[:callback] }
     end
   end
 
