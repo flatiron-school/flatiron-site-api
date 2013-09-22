@@ -6,7 +6,7 @@ class SpeakersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @speakers }
+      format.json { render json: @speakers.to_json, callback: params[:callback] }
     end
   end
 
