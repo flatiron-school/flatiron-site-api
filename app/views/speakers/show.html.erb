@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Full name:</b>
+  <%= @speaker.full_name %>
+</p>
+
+<p>
+  <b>Screen name:</b>
+  <%= @speaker.screen_name %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%= @speaker.job_title %>
+</p>
+
+<p>
+  <b>Profile img url:</b>
+  <%= @speaker.profile_img_url %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @speaker.bio %>
+</p>
+
+
+<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
+<%= link_to 'Back', speakers_path %>

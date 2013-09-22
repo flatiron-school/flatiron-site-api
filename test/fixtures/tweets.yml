@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  screen_name: MyString
+  content: MyText
+  tweet_date_time: MyString
+
+two:
+  screen_name: MyString
+  content: MyText
+  tweet_date_time: MyString
