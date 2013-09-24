@@ -11,24 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130922213053) do
+ActiveRecord::Schema.define(:version => 20130924005742) do
 
   create_table "speakers", :force => true do |t|
-    t.string   "full_name"
-    t.string   "screen_name"
-    t.string   "job_title"
-    t.string   "profile_img_url"
-    t.text     "bio"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string    "full_name"
+    t.string    "job_title"
+    t.string    "screen_name"
+    t.text      "bio"
+    t.string    "profile_img_url"
+    t.timestamp "created_at",      :null => false
+    t.timestamp "updated_at",      :null => false
+    t.integer   "position"
   end
 
   create_table "tweets", :force => true do |t|
-    t.string   "screen_name"
-    t.text     "content"
-    t.string   "tweet_date_time"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string    "screen_name"
+    t.text      "content"
+    t.string    "tweet_date_time"
+    t.timestamp "created_at",      :null => false
+    t.timestamp "updated_at",      :null => false
   end
 
 end

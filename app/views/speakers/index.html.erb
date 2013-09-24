@@ -7,6 +7,7 @@
     <th>Job title</th>
     <th>Profile img url</th>
     <th>Bio</th>
+    <th>Position</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
     <td><%= speaker.job_title %></td>
     <td><%= speaker.profile_img_url %></td>
     <td><%= speaker.bio %></td>
+    <td><%= speaker.position %></td>
     <td><%= link_to 'Show', speaker %></td>
     <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
     <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
