@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  http_basic_authenticate_with name: "flatiron", password: "flat1ron", except: :index
+
   # GET /tweets
   # GET /tweets.json
   def index

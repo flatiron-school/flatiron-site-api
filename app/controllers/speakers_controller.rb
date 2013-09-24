@@ -1,4 +1,6 @@
 class SpeakersController < ApplicationController
+  http_basic_authenticate_with name: "flatiron", password: "flat1ron", except: :index
+
   # GET /speakers
   # GET /speakers.json
   def index
