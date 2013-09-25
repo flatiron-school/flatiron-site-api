@@ -4,6 +4,8 @@ FlatironTwitterApi::Application.routes.draw do
 
   resources :speakers
 
+  root :to => 'speakers#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

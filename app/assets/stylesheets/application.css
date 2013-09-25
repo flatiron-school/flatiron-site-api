@@ -51,12 +51,16 @@ h4 {
 }
 
 table {
+  table-layout: fixed;
+  width: 100%;
   padding: 0;
   margin: 0;
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 0;
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
 
 tr:nth-child(odd) {
@@ -87,6 +91,40 @@ td {
   font-size: 1.1em;
 }
 
+  .url {
+    /* Do not specify any margins, paddings or borders here */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -moz-binding:url(ellipsis-xbl.xml#ellipsis); 
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+  }
+
+  .change {
+    width: 60px;
+  }
+
 p {
   margin: 10px 0 20px;
+}
+
+nav {
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 30px;
+}
+
+nav a:link, nav a:visited {
+  display: inline-block;
+  padding: 10px 25px;
+  color: #777;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+  color: #000;
+  text-decoration: none;
 }

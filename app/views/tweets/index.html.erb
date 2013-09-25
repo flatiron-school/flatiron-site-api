@@ -5,9 +5,9 @@
     <th>Screen name</th>
     <th>Content</th>
     <th>Tweet date time</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th class="change"></th>
+    <th class="change"></th>
+    <th class="change"></th>
   </tr>
 
 <% @tweets.each do |tweet| %>
@@ -15,9 +15,9 @@
     <td><%= tweet.screen_name %></td>
     <td><%= tweet.content %></td>
     <td><%= tweet.tweet_date_time %></td>
-    <td><%= link_to 'Show', tweet %></td>
-    <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-    <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="change"><%= link_to 'Show', tweet %></td>
+    <td class="change"><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+    <td class="change"><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

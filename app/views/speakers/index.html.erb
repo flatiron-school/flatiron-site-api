@@ -5,12 +5,12 @@
     <th>Full name</th>
     <th>Screen name</th>
     <th>Job title</th>
-    <th>Profile img url</th>
+    <th class="url">Profile img url</th>
     <th>Bio</th>
     <th>Position</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th class="change"></th>
+    <th class="change"></th>
+    <th class="change"></th>
   </tr>
 
 <% @speakers.each do |speaker| %>
@@ -18,12 +18,12 @@
     <td><%= speaker.full_name %></td>
     <td><%= speaker.screen_name %></td>
     <td><%= speaker.job_title %></td>
-    <td><%= speaker.profile_img_url %></td>
+    <td class="url"><%= speaker.profile_img_url %></td>
     <td><%= speaker.bio %></td>
     <td><%= speaker.position %></td>
-    <td><%= link_to 'Show', speaker %></td>
-    <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
-    <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td class="change"><%= link_to 'Show', speaker %></td>
+    <td class="change"><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
+    <td class="change"><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
