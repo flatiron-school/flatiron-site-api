@@ -11,3 +11,82 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 0 0 10px;
+  text-align: center;
+  color: #000;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 25px 0 10px;
+  color: #4c4c4c;
+  clear: both;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 20px 0 10px;
+  color: #4c4c4c;
+  font-weight: normal;
+}
+
+h4 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: normal;
+  color: #aaa;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px 0 60px;
+}
+
+table {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 0;
+}
+
+tr:nth-child(odd) {
+  background: #efefef;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+th {
+  font-family: Georgia, serif;
+  background: #efefef;
+  color: #4c4c4c;
+  font-size: 1em;
+}
+
+th, td {
+  vertical-align: top;
+  border-top: 0;
+  border-left: 0;
+  padding: 10px;
+  border-right: 1px dotted #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+td {
+  font-size: 1.1em;
+}
+
+p {
+  margin: 10px 0 20px;
+}
