@@ -5,10 +5,12 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
 
+    # first_tweet = Tweet.first
+    # if first_tweet.nil?
+    #   first_tweet = Tweet.create
+    # end
+
     first_tweet = Tweet.first
-    if first_tweet.nil?
-      first_tweet = Tweet.new
-    end
 
     @@count = first_tweet.id
 
@@ -25,11 +27,11 @@ class TweetsController < ApplicationController
       end
     end
 
-    @tweets = Tweet.order("id ASC")
+    @tweets = Tweet.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tweets.to_json, callback: params[:callback] }
+      format.json { render json: @tweets.first(3).to_json, callback: params[:callback] }
     end
   end
 
