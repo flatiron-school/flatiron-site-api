@@ -128,3 +128,13 @@ nav a:hover, nav a:active {
   color: #000;
   text-decoration: none;
 }
+
+a:link, a:visited {
+  color: rgb(38, 196, 255);
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #000;
+  text-decoration: none;
+}
