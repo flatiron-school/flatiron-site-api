@@ -10,10 +10,10 @@ class TweetsController < ApplicationController
       first_tweet = Tweet.new
     end
 
-    @count = first_tweet.id
+    @@count = first_tweet.id
 
     Twitter.user_timeline("FlatironSchool").first(3).each do |status|
-      t = Tweet.find_by_id(@count)
+      t = Tweet.find_by_id(@@count)
       if t.nil?
         t = Tweet.new
       end
@@ -21,7 +21,7 @@ class TweetsController < ApplicationController
       t.content = status.text
       t.tweet_date_time = status.created_at
       if t.save
-        @count += 1
+        @@count += 1
       end
     end
 
