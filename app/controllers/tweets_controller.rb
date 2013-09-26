@@ -5,33 +5,23 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
 
-    # first_tweet = Tweet.first
-    # if first_tweet.nil?
-    #   first_tweet = Tweet.create
-    # end
+    @tweets = Tweet.order("created_at DESC").first(3)
 
-    first_tweet = Tweet.first
-
-    @@count = first_tweet.id
-
-    Twitter.user_timeline("FlatironSchool").first(3).each do |status|
-      t = Tweet.find_by_id(@@count)
+    #TODO move to cron job
+    Twitter.user_timeline("FlatironSchool").first(3).each_with_index do |status, i|
+      t = @tweets[i]
       if t.nil?
         t = Tweet.new
       end
       t.screen_name = status.user.screen_name
       t.content = status.text
       t.tweet_date_time = status.created_at
-      if t.save
-        @@count += 1
-      end
+      t.save
     end
-
-    @tweets = Tweet.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tweets.first(3).to_json, callback: params[:callback] }
+      format.json { render json: @tweets.to_json, callback: params[:callback] }
     end
   end
 
