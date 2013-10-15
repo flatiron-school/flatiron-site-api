@@ -1,10 +1,10 @@
 class EventsController < ApplicationController
   http_basic_authenticate_with name: "flatiron", password: "flat1ron", except: :index
-  
+
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.order('date_time DESC')
 
     respond_to do |format|
       format.html # index.html.erb

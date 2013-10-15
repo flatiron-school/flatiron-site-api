@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131015194523) do
+ActiveRecord::Schema.define(:version => 20131015203551) do
 
   create_table "events", :force => true do |t|
     t.string   "img_url"
     t.string   "title"
-    t.date     "date_time"
+    t.datetime "date_time"
     t.text     "description"
     t.string   "signup_link"
     t.datetime "created_at",       :null => false

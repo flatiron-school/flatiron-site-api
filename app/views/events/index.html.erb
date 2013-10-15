@@ -16,7 +16,7 @@
   <tr>
     <td class="url"><%= event.img.url %></td>
     <td><%= event.title %></td>
-    <td><%= event.date_time %></td>
+    <td><%= event.date_time.strftime('%b %e, %l:%M %p') %></td>
     <td><%= event.description %></td>
     <td class="url"><%= event.signup_link %></td>
     <td class="change"><%= link_to 'Show', event %></td>
