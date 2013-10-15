@@ -9,8 +9,9 @@
 </head>
 <body>
   <nav>
-    <a href="/speakers">Speakers</a>
-    <a href="/tweets">Tweets</a>
+    <%= link_to "Speakers", speakers_path %>
+    <%= link_to "Events", events_path %>
+    <%= link_to "Tweets", tweets_path %>
   </nav>
 <%= yield %>
 
