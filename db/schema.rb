@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131015182214) do
+ActiveRecord::Schema.define(:version => 20131015194523) do
 
   create_table "events", :force => true do |t|
     t.string   "img_url"
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(:version => 20131015182214) do
     t.date     "date_time"
     t.text     "description"
     t.string   "signup_link"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
   end
 
   create_table "speakers", :force => true do |t|

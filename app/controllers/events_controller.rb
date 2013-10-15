@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  http_basic_authenticate_with name: "flatiron", password: "flat1ron", except: :index
+  
   # GET /events
   # GET /events.json
   def index
@@ -73,6 +75,8 @@ class EventsController < ApplicationController
   # DELETE /events/1.json
   def destroy
     @event = Event.find(params[:id])
+    @event.img = nil
+    @event.save
     @event.destroy
 
     respond_to do |format|

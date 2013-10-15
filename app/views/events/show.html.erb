@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Img url:</b>
-  <%= @event.img_url %>
+  <b>Img Url:</b>
+  <%= @event.img.url %>
+<p>
+  <b>Img:</b>
+  <%= image_tag @event.img.url %>
+  <%= image_tag @event.img.url(:medium) %>
+  <%= image_tag @event.img.url(:thumb) %>
 </p>
 
 <p>
