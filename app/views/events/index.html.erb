@@ -1,9 +1,9 @@
 <h1>Listing events</h1>
-
+<%= link_to 'New Event', new_event_path %><br /><br />
 <table>
   <tr>
-    <th class="url">Img url</th>
     <th>Title</th>
+    <th class="url">Img url</th>
     <th>Date time</th>
     <th>Description</th>
     <th class="url">Signup link</th>
@@ -14,8 +14,8 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td class="url"><%= event.img.url %></td>
     <td><%= event.title %></td>
+    <td class="url"><%= event.img.url %></td>
     <td><%= event.date_time.strftime('%b %e, %l:%M %p') %></td>
     <td><%= event.description %></td>
     <td class="url"><%= event.signup_link %></td>

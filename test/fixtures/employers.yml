@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  student: MyString
+  before_flatiron: MyString
+  after_flatiron: MyString
+
+two:
+  title: MyString
+  student: MyString
+  before_flatiron: MyString
+  after_flatiron: MyString

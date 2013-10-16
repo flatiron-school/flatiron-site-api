@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131015203551) do
+ActiveRecord::Schema.define(:version => 20131016205430) do
+
+  create_table "employers", :force => true do |t|
+    t.string   "title"
+    t.string   "student"
+    t.string   "before_flatiron"
+    t.string   "after_flatiron"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.string   "img_url"

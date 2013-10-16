@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @employer.title %>
+</p>
+
+<p>
+  <b>Img Url:</b>
+  <%= @employer.img.url %>
+</p>
+
+<p>
+  <b>Img:</b>
+  <%= image_tag @employer.img.url %>
+  <%= image_tag @employer.img.url(:medium) %>
+  <%= image_tag @employer.img.url(:thumb) %>
+</p>
+
+<p>
+  <b>Student:</b>
+  <%= @employer.student %>
+</p>
+
+<p>
+  <b>Before flatiron:</b>
+  <%= @employer.before_flatiron %>
+</p>
+
+<p>
+  <b>After flatiron:</b>
+  <%= @employer.after_flatiron %>
+</p>
+
+
+<%= link_to 'Edit', edit_employer_path(@employer) %> |
+<%= link_to 'Back', employers_path %>

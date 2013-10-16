@@ -1,0 +1,37 @@
+<%= form_for @employer, :url => employers_path, :html => { :multipart => true } do |f| %>
+  <% if @employer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employer.errors.count, "error") %> prohibited this employer from being saved:</h2>
+
+      <ul>
+      <% @employer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :img %><br />
+    <%= f.file_field :img %>
+  </div>
+  <div class="field">
+    <%= f.label :student %><br />
+    <%= f.text_field :student %>
+  </div>
+  <div class="field">
+    <%= f.label :before_flatiron %><br />
+    <%= f.text_field :before_flatiron %>
+  </div>
+  <div class="field">
+    <%= f.label :after_flatiron %><br />
+    <%= f.text_field :after_flatiron %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
