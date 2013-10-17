@@ -2,6 +2,7 @@
 <%= link_to 'New Employer', new_employer_path %><br /><br />
 <table>
   <tr>
+    <th>Position</th>
     <th>Company</th>
     <th class="url">Img url</th>
     <th>Hired Student</th>
@@ -14,6 +15,7 @@
 
 <% @employers.each do |employer| %>
   <tr>
+    <td><%= employer.position %></td>
     <td><%= employer.title %></td>
     <td class="url"><%= employer.img.url %></td>
     <td><%= employer.student %></td>

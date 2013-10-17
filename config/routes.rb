@@ -2,7 +2,6 @@ FlatironTwitterApi::Application.routes.draw do
 
   resources :employers
 
-
   resources :events
 
   resources :tweets

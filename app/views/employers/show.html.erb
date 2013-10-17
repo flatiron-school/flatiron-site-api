@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b>Company:</b>
   <%= @employer.title %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @employer.position %>
 </p>
 
 <p>
@@ -12,9 +17,7 @@
 
 <p>
   <b>Img:</b>
-  <%= image_tag @employer.img.url %>
   <%= image_tag @employer.img.url(:medium) %>
-  <%= image_tag @employer.img.url(:thumb) %>
 </p>
 
 <p>

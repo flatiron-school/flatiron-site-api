@@ -4,7 +4,7 @@ class EmployersController < ApplicationController
   # GET /employers
   # GET /employers.json
   def index
-    @employers = Employer.all
+    @employers = Employer.order("position ASC")
 
     respond_to do |format|
       format.html # index.html.erb
