@@ -8,7 +8,7 @@ class EmployersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @employers }
+      format.json { render json: @employers.to_json, callback: params[:callback] }
     end
   end
 
