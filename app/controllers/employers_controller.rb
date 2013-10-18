@@ -26,7 +26,10 @@ class EmployersController < ApplicationController
   # GET /employers/new
   # GET /employers/new.json
   def new
+    last_employer = Employer.order('position DESC').first
+    pos = last_employer.position
     @employer = Employer.new
+    @employer.position = pos + 1
 
     respond_to do |format|
       format.html # new.html.erb
