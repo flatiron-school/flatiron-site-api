@@ -25,11 +25,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 gem 'twitter'
 gem 'profanity_filter' #filter cuss words from twitter feed.
 
 gem "paperclip", "~> 3.0" #image upload abilities
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

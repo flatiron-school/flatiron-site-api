@@ -87,4 +87,20 @@ class EmployersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  #ajax post: sort method
+  def sort
+    # Rails.logger.info("PARAMS: #{params.inspect}")
+    # PARAMS: {"employers"=>{"0"=>{"e_id"=>"2"}, "1"=>{"e_id"=>"3"}, "2"=>{"e_id"=>"1"}, "3"=>{"e_id"=>"4"}, "4"=>{"e_id"=>"8"}}, "controller"=>"employers", "action"=>"sort"}
+
+    params[:employers].each do |index, employer_hash|
+      e = Employer.find_by_id(employer_hash[:e_id])
+      e.position = index.to_i + 1
+      e.save
+    end
+
+    employers = Employer.order('position ASC') #re-order
+    render json: employers.to_json
+
+  end
 end

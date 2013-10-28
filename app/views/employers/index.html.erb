@@ -1,31 +1,35 @@
 <h1>Listing employers</h1>
+<p>Drag and drop to re-order employers.</p>
 <%= link_to 'New Employer', new_employer_path %><br /><br />
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Company</th>
-    <th class="url">Img url</th>
-    <th>Hired Student</th>
-    <th>Before Flatiron</th>
-    <th>After Flatiron</th>
-    <th class="change"></th>
-    <th class="change"></th>
-    <th class="change"></th>
-  </tr>
-
-<% @employers.each do |employer| %>
-  <tr>
-    <td><%= employer.position %></td>
-    <td><%= employer.title %></td>
-    <td class="url"><%= employer.img.url %></td>
-    <td><%= employer.student %></td>
-    <td><%= employer.before_flatiron %></td>
-    <td><%= employer.after_flatiron %></td>
-    <td class="change"><%= link_to 'Show', employer %></td>
-    <td class="change"><%= link_to 'Edit', edit_employer_path(employer) %></td>
-    <td class="change"><%= link_to 'Destroy', employer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+<table id="sort">
+  <thead>    
+    <tr>
+      <th>Position</th>
+      <th>Company</th>
+      <th class="url">Img url</th>
+      <th>Hired Student</th>
+      <th>Before Flatiron</th>
+      <th>After Flatiron</th>
+      <th class="change"></th>
+      <th class="change"></th>
+      <th class="change"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @employers.each do |employer| %>
+    <tr>
+      <td data-id="<%= employer.id %>" class="position"><%= employer.position %></td>
+      <td><%= employer.title %></td>
+      <td class="url"><%= employer.img_file_name %></td>
+      <td><%= employer.student %></td>
+      <td><%= employer.before_flatiron %></td>
+      <td><%= employer.after_flatiron %></td>
+      <td class="change"><%= link_to 'Show', employer %></td>
+      <td class="change"><%= link_to 'Edit', edit_employer_path(employer) %></td>
+      <td class="change"><%= link_to 'Destroy', employer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br />

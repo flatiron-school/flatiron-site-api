@@ -10,6 +10,8 @@ FlatironTwitterApi::Application.routes.draw do
 
   root :to => 'static#index'
 
+  post "/employers_sort" => "employers#sort" #ajax post route
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

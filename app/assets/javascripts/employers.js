@@ -25,19 +25,21 @@ $(function() {
 
       $.post( '/employers_sort', {"employers": employers}, function(employers){
 
+        console.log(employers);
+
         $('#sort tbody').empty(); //clear out table rows from tbody
 
         $(employers).each(function(i, employer) { //append each row back in the updated position order.
           $('#sort tbody').append('<tr> \
                 <td data-id="'+employer.id+'" class="position">'+employer.position+'</td> \
                 <td>'+employer.title+'</td> \
-                <td class="url">'+employer.img.url+'</td> \
+                <td class="url">'+employer.img_file_name+'</td> \
                 <td>'+employer.student+'</td> \
                 <td>'+employer.before_flatiron+'</td> \
                 <td>'+employer.after_flatiron+'</td> \
-                <td class="change"><a href="./'+employer.id+'">Show</a></td> \
-                <td class="change"><%= link_to 'Edit', edit_employer_path(employer) %></td> \
-                <td class="change"><%= link_to 'Destroy', employer, method: :delete, data: { confirm: 'Are you sure?' } %></td> \
+                <td class="change"><a href="/employers/'+employer.id+'">Show</a></td> \
+                <td class="change"><a href="/employers/'+employer.id+'/edit">Edit</a></td> \
+                <td class="change"><a href="/employers/'+employer.id+'" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a></td> \
               </tr>');
         });
       }); //AJAX post the data.
