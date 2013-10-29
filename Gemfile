@@ -28,7 +28,8 @@ end
 gem 'twitter'
 gem 'profanity_filter' #filter cuss words from twitter feed.
 
-gem "paperclip", "~> 3.0" #image upload abilities
+gem "paperclip", "~> 3.0" #image upload abilities.
+gem 'aws-sdk', '~> 1.5.7' #amazon s3 storage adapter for images.
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
