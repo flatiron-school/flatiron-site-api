@@ -68,9 +68,9 @@ FlatironTwitterApi::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['flatiron-web-assets'],
-      :access_key_id => ENV['AKIAJ4VEWYI7UUKM3VUA'],
-      :secret_access_key => ENV['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']
+      :bucket => 'flatiron-web-assets',
+      :access_key_id => 'AKIAJ4VEWYI7UUKM3VUA',
+      :secret_access_key => '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'
     }
   }
 end
