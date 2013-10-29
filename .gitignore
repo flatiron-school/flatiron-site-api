@@ -25,3 +25,6 @@ ehthumbs.db
 Thumbs.db
 
 /config/database.yml
+
+# Ignore all images inside the /employers directory.
+/employers
