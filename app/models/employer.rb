@@ -3,7 +3,6 @@ class Employer < ActiveRecord::Base
   has_attached_file :img, :styles => { :medium => "450x309>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 
   validates_uniqueness_of :title
-  validates_presence_of :position
   validates_presence_of :student
   validates_presence_of :before_flatiron
   validates_presence_of :after_flatiron
